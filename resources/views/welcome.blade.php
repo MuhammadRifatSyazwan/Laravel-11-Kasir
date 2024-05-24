@@ -17,53 +17,28 @@
     </head>
     
     <body> 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              @if (Route::has('login'))
-              <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/home') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white text-decoration-none btn btn-secondary hover-bg-primary"
-                                        >
-                                        Log in
-                                    </a>
-                                    
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                    @endauth
-                            </nav>
-                        @endif
-                    </div>
-                </nav>
+        
                  
                  <!-- Header-->
-        <header class="masthead d-flex align-items-center">
-            <div class="container px-4 px-lg-5 text-center">
-                <h1 class="mb-1">Stylish Portfolio</h1>
-                <img src="{{ asset('') }}" alt="">
-                <h3 class="mb-5"><em>A Free Bootstrap Theme by Start Bootstrap</em></h3>
-                <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+        <header class="masthead d-flex align-items-center ">
+            
+                
+            <div class="container px-4 px-lg-5">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h1 class="mb-1 text-warning">KELOMPOK 5 </h1>
+                        <h3 class="mb-5"><em>Selamat datang di kelompok 5</em></h3>
+                        <a class="btn btn-primary btn-xl" href="{{ route('login') }}">LOGIN</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img class="img-fluid " src="{{ asset('admin-assets/img/kasir.jpg') }}" alt="">
+                    </div>
+                </div>
             </div>
+              
+          
         </header>
-        <!-- About-->
+        <!-- artikel kasir-->
         <section class="content-section bg-light" id="about">
             <div class="container px-4 px-lg-5 text-center">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -74,11 +49,12 @@
                             <a href="https://unsplash.com/">Unsplash</a>
                             !
                         </p>
-                        <a class="btn btn-dark btn-xl" href="#services">What We Offer</a>
+                        <a class="btn btn-dark btn-xl" href="https://github.com/MuhammadRifatSyazwan/Workshop-Kasir" target="_blank">What We Offer</a>
                     </div>
                 </div>
             </div>
         </section>
+        {{-- end kair --}}
         <!-- Services-->
         <section class="content-section bg-primary text-white text-center" id="services">
             <div class="container px-4 px-lg-5">
@@ -86,19 +62,19 @@
                     <h3 class="text-secondary mb-0">Services</h3>
                     <h2 class="mb-5">What We Offer</h2>
                 </div>
-                <div class="row gx-4 gx-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-screen-smartphone"></i></span>
+                        <img class="oval-border mx-auto d-block mb-3" src="{{ asset('admin-assets/img/portfolio-2.jpg') }}" width="170" alt="">
                         <h4><strong>Responsive</strong></h4>
                         <p class="text-faded mb-0">Looks great on any screen size!</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                        <img class="oval-border mx-auto d-block mb-3" src="{{ asset('admin-assets/img/portfolio-2.jpg') }}" width="170" alt="">
                         <h4><strong>Redesigned</strong></h4>
                         <p class="text-faded mb-0">Freshly redesigned for Bootstrap 5.</p>
                     </div>
                     <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-like"></i></span>
+                        <img class=" rounded-circle  mx-auto d-block mb-3" src="{{ asset('admin-assets/img/portfolio-2.jpg') }}" width="170" alt="">
                         <h4><strong>Favorited</strong></h4>
                         <p class="text-faded mb-0">
                             Millions of users
@@ -106,11 +82,17 @@
                             Start Bootstrap!
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+        
+                    <!--
                     <div class="col-lg-3 col-md-6">
                         <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-mustache"></i></span>
                         <h4><strong>Question</strong></h4>
                         <p class="text-faded mb-0">I mustache you a question...</p>
                     </div>
+                -->
                 </div>
             </div>
         </section>
@@ -141,18 +123,18 @@
                                     <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-1.jpg" alt="..." />
+                            <img class="img-fluid" src="{{ asset('admin-assets/img/portfolio-4.jpg') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
                         <a class="portfolio-item" href="#!">
                             <div class="caption">
                                 <div class="caption-content">
-                                    <div class="h2">Ice Cream</div>
+                                    <div class="h2">halaman login</div>
                                     <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-2.jpg" alt="..." />
+                            <img class="img-fluid" src="{{ asset('admin-assets/img/portfolio-3.jpg') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -163,7 +145,7 @@
                                     <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-3.jpg" alt="..." />
+                            <img class="img-fluid" src="{{ asset('admin-assets/img/portfolio-2.jpg') }}" alt="..." />
                         </a>
                     </div>
                     <div class="col-lg-6">
@@ -174,7 +156,7 @@
                                     <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
                                 </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio-4.jpg" alt="..." />
+                            <img class="img-fluid" src="{{ asset('admin-assets/img/portfolio-1.jpg') }}" alt="..." />
                         </a>
                     </div>
                 </div>

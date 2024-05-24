@@ -95,11 +95,10 @@
                             Pengguna
                         </a>
                         @endif
-                        @if (Auth::user()->peran=='admin')
+                        
                         <a href="{{ route('produk') }}" wire:navigate class="btn {{  request()->routeIs('produk') ? 'btn-primary': 'btn-outline-primary' }}">
                             Produk
                         </a>
-                        @endif
                         <a href="{{ route('transaksi') }}" wire:navigate class="btn {{  request()->routeIs('transaksi') ? 'btn-primary': 'btn-outline-primary' }}">
                             Transaksi
                         </a>

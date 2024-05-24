@@ -8,7 +8,7 @@ use App\Models\User as ModelUser;
 
 class User extends Component
 {   
-    public $pilihanMenu ='lihat';
+    public $pilihanMenu;
     public $nama;
     public $email;
     public $peran;

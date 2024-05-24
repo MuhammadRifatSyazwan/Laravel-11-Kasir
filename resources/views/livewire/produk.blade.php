@@ -13,7 +13,7 @@
                     Tambah produk
                 </button>
                 <button wire:click="pilihMenu('excel')"
-                    class="btn {{ $pilihanMenu=='tambah' ? 'btn-primary' : 'btn-outline-primary' }}">
+                    class="btn {{ $pilihanMenu=='excel' ? 'btn-primary' : 'btn-outline-primary' }}">
                     Import produk
                 </button>
                 <button wire:loading class="btn btn-info">
@@ -44,7 +44,7 @@
                                             <tr>
                                                 <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $produk->kode }}</td>
-                                                <td>{{ $produk->name }}</td>
+                                                <td>{{ $produk->nama }}</td>
                                                 <td>{{ $produk->harga }}</td>
                                                 <td>{{ $produk->stok }}</td>
                                                 <td>
@@ -89,7 +89,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                     <br>
-                                    <label>Stock</label>
+                                    <label>Stok</label>
                                     <input type="number" class="form-control" wire:model='stok' />
                                     @error('stok')
                                         <span class="text-danger">{{ $message }}</span>
@@ -107,7 +107,7 @@
                                 Edit produk
                             </div>
                             <div class="card-body">
-                                <form wire:submit='edit'>
+                                <form wire:submit.prevent="edit">
                                     <label>nama</label>
                                     <input type="text" class="form-control" wire:model='nama' />
                                     @error('nama')
@@ -132,7 +132,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                     <br>
-                                    <button type="submit" class="btn btn-primary mt-3">SIMPAN</button>
+                                    <button type="submit" class="btn btn-primary mt-3" >SIMPAN</button>
                                 </form>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                                 Import produk
                             </div>
                             <div class="card-body">
-                                <form action="" wire:submit='importExcel'>
+                                <form wire:submit='importExcel'>
                                     <input type="file" class="form-control" wire:model='fileExcel'>
                                     <br>
                                     <button class="btn btn-primary" type="submit">KIRIM</button>

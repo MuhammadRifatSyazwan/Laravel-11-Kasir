@@ -9,7 +9,8 @@ use Maatwebsite\Excel\Concerns\WithStartRow;
 
 class Produk implements ToCollection, WithStartRow
 {
-    public function startRow(): int{
+    public function startRow(): int
+    {
         return 2;
     }
     /**
@@ -18,7 +19,7 @@ class Produk implements ToCollection, WithStartRow
     public function collection(Collection $collection)
     {
         foreach ($collection as $col){
-            $kodeyangadadidatabase = ModelProduk::where('kode, $col[1]')->first();
+            $kodeyangadadidatabase = ModelProduk::where('kode', $col[1])->first();
             if (! $kodeyangadadidatabase){
                 $simpan = new ModelProduk();
                 $simpan->kode = $col[1];
