@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    public function getIsAdminAttribute()
+    {
+        return $this->is_admin;
+    }
     use HasFactory, Notifiable;
 
     /**

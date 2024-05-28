@@ -19,7 +19,7 @@ class DetilTransaksi extends Model
         'transaksi_id', // Menambahkan transaksi_id ke dalam fillable
         // tambahkan atribut lain yang ingin diisi secara massal
         'produk_id',
-        'jumlah',
+        'jumlah'
         // 'harga',
         // dll.
     ];

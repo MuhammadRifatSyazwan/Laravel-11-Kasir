@@ -68,10 +68,8 @@ class Transaksi extends Component
                 'jumlah' => 0
             ]);
             $detil->jumlah += 1;
-            //databse save
-            // $detil->save(); 
+            // $detil->save();
             $produk->stok -= 1;
-            //database produk
             // $produk->save();
             $this->reset('kode');
             

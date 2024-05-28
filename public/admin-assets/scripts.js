@@ -78,3 +78,11 @@ function fadeIn(el, display) {
         }
     })();
 };
+
+var loginBtn = document.getElementById("loginBtn");
+
+// Menambahkan event listener untuk menangkap klik pada tombol
+loginBtn.addEventListener("click", function() {
+    // Menampilkan pesan alert ketika tombol diklik
+    alert("Anda harus login");
+});

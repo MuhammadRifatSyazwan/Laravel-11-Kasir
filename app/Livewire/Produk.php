@@ -160,7 +160,7 @@ namespace App\Livewire;
             }
 
             // Reset input form
-            // $this->reset();
+            $this->reset();
 
             // Flash message atau tindakan lain setelah edit berhasil
             session()->flash('message', 'Produk berhasil diperbarui.');
